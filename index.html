@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Project</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        *{
+         font-family: 'Poppins', sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.jpg" alt="">
+        </div>
+
+        <div class="background">
+            <img src="Cricket_India_Crest.webp" id="logobg" alt="">
+        </div>
+
+        <div class="heading">
+            <h1 id="head">
+                Indian Cricket Team
+            </h1>
+
+            <p style="font-weight: 500;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nam nesciunt cum error officia, perferendis laborum. Sunt aperiam sit, tempore voluptatem assumenda quam nam architecto consectetur veniam natus veritatis corrupti quod minima quo. Atque porro corrupti praesentium culpa tempore? Ipsam.
+            </p>
+
+            <button>WATCH NOW</button>
+        </div>
+
+        <div class="image">
+            <img id="myimage" src="Indian-cricketer.jpg" alt="">
+        </div>
+
+
+        <div class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Team</li>
+                <li>Performance</li>
+                <li>Rank</li>
+            </ul>
+        </div>
+
+        <div class="empty">
+
+
+        </div>
+
+        <div class="list">
+            <ol>
+                <li onclick="myFun('Indian-cricketer.jpg')">CSK</li>
+                <li onclick="myFun('Aus-team.webp')">DC</li>
+                <!-- <li onclick="myFun('imgaes/mi.png', 'dodgerblue', 'Mumbai Indians', 'imgaes/milogo.png')">MI</li>
+                <li onclick="myFun('imgaes/srh.png', 'orangered', 'Sun Raise Hydrabad', 'imgaes/srhlogo.png')">SRH</li>
+                <li onclick="myFun('imgaes/kp.png', 'red', 'King XI Punjab', 'imgaes/kplogo.png')">KXIP</li>
+                <li onclick="myFun('imgaes/rr1.png', '#ff3385', 'Rajastan Royals', 'imgaes/rrlogo.png')">RR</li>
+                <li onclick="myFun('imgaes/kkr.png', 'purple', 'Kolkata Knight Riders', 'imgaes/kkrlogo.png')">KKR</li> -->
+            </ol>
+        </div>
+
+    </div>
+
+<script>
+
+    function myFun(image, colour, head, logo){
+        document.getElementById('myimage').src=image;
+        document.querySelector('.empty').style.backgroundColor=colour;
+        document.querySelector('button').style.backgroundColor=colour;
+        document.getElementById('head').innerHTML=head;
+        document.getElementById('logobg').src=logo;
+    }
+
+</script>
+
+</body>
+</html>
