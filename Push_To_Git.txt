@@ -1,0 +1,30 @@
+To push a folder into GitHub using Visual Studio Code (VS Code), you can follow these steps:
+Ensure Git is Installed and Configured:
+Make sure Git is installed on your computer and configured with your username and email.
+Open the Folder in VS Code:
+Open the folder you want to push to GitHub in VS Code. You can do this by selecting "File" > "Open Folder" and then selecting your folder.
+Initialize a Git Repository:
+In the VS Code interface, click on the "Source Control" icon in the left sidebar or press Ctrl + Shift + G (Windows/Linux) or Cmd + Shift + G (macOS) to open the Source Control view.
+Click on the "Initialize Repository" button to create a new Git repository in the current folder. This is equivalent to running git init in the terminal.
+Stage and Commit Changes:
+In the Source Control view, you will see your files listed. Select the files you want to stage for the commit by clicking on them.
+Write a commit message and press Ctrl + Enter to commit the changes. Alternatively, you can use the terminal to commit by running git add . followed by git commit -m "Your commit message".
+Add Remote Repository:
+In the Source Control view, click on the Overflow button (three dots) and select "Push" > "Add Remote". Alternatively, you can use the terminal to add the remote repository by running:
+bash
+git remote add origin https://github.com/nsgowebjavaprog/PROJECT
+
+Verify the remote repository by running git remote -v in the terminal.
+Push Changes to GitHub:
+Go back to the Source Control view, click on the Overflow button (three dots), and select "Push" to push your changes to the remote repository. Alternatively, you can use the terminal to push by running:
+bash
+git push -u origin master
+
+You may be prompted to log in to your GitHub account. Follow the prompts to authenticate.
+Using the Publish to GitHub Command
+If you prefer a more streamlined process, you can use the "Publish to GitHub" command directly from VS Code:
+Open the Command Palette:
+Press Ctrl + Shift + P (Windows/Linux) or Cmd + Shift + P (macOS) to open the Command Palette.
+Publish to GitHub:
+Type "Publish to GitHub" and select the command. Follow the prompts to choose between a public or private repository, enter a repository name, and optionally create a .gitignore file.
+This method will handle the initialization, adding the remote, and pushing the changes in one go.

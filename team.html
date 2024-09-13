@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T20 World Cup Winners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 1em;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>T20 World Cup Winners</h1>
+    </header>
+    <main>
+        <section id="rankings">
+            <h2>T20 World Cup Country Winners</h2>
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Country</th>
+                        <th>Number of Wins</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 T20 World Cup Rankings</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rankingBody = document.getElementById("ranking-body");
+            const rankings = [
+                { rank: 1, country: "Australia", wins: 1 },
+                { rank: 2, country: "India", wins: 2 },
+                { rank: 3, country: "England", wins: 2 },
+                { rank: 4, country: "New Zealand", wins: 0 },
+                { rank: 5, country: "South Africa", wins: 0 },
+                { rank: 6, country: "Pakistan", wins: 1 },
+                { rank: 7, country: "West Indies", wins: 2 },
+                { rank: 8, country: "Sri Lanka", wins: 1 },
+                { rank: 9, country: "Bangladesh", wins: 0 },
+                { rank: 10, country: "Zimbabwe", wins: 0 },
+            ];
+
+            rankings.forEach((ranking) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${ranking.rank}</td>
+                    <td>${ranking.country}</td>
+                    <td>${ranking.wins}</td>
+                `;
+                rankingBody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>

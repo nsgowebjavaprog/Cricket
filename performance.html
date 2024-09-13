@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Team Performance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 1em;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cricket Team Performance Over Last 10 Years</h1>
+    </header>
+    <main>
+        <section id="performance">
+            <h2>Team Performance Summary</h2>
+            <table id="performance-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Country</th>
+                        <th>Matches Played</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                        <th>Win Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="performance-body">
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cricket Performance</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const performanceBody = document.getElementById("performance-body");
+            const performanceData = [
+                { rank: 1, country: "Australia", matches: 100, wins: 60, losses: 30, draws: 10, winPercentage: "60%" },
+                { rank: 2, country: "India", matches: 120, wins: 70, losses: 40, draws: 10, winPercentage: "58.33%" },
+                { rank: 3, country: "England", matches: 90, wins: 50, losses: 35, draws: 5, winPercentage: "55.56%" },
+                { rank: 4, country: "New Zealand", matches: 80, wins: 45, losses: 30, draws: 5, winPercentage: "56.25%" },
+                { rank: 5, country: "South Africa", matches: 90, wins: 50, losses: 35, draws: 5, winPercentage: "55.56%" },
+                { rank: 6, country: "Pakistan", matches: 80, wins: 40, losses: 35, draws: 5, winPercentage: "50%" },
+                { rank: 7, country: "West Indies", matches: 70, wins: 35, losses: 30, draws: 5, winPercentage: "50%" },
+                { rank: 8, country: "Sri Lanka", matches: 80, wins: 40, losses: 35, draws: 5, winPercentage: "50%" },
+                { rank: 9, country: "Bangladesh", matches: 60, wins: 25, losses: 30, draws: 5, winPercentage: "41.67%" },
+                { rank: 10, country: "Zimbabwe", matches: 50, wins: 15, losses: 30, draws: 5, winPercentage: "30%" },
+            ];
+
+            performanceData.forEach((data) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${data.rank}</td>
+                    <td>${data.country}</td>
+                    <td>${data.matches}</td>
+                    <td>${data.wins}</td>
+                    <td>${data.losses}</td>
+                    <td>${data.draws}</td>
+                    <td>${data.winPercentage}</td>
+                `;
+                performanceBody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>

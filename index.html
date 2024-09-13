@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="logo.jpg" alt="">
+            <img src="logo.jpg" alt="" width="10" height="10">
         </div>
 
         <div class="background">
@@ -30,10 +30,11 @@
             </h1>
 
             <p style="font-weight: 500;">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nam nesciunt cum error officia, perferendis laborum. Sunt aperiam sit, tempore voluptatem assumenda quam nam architecto consectetur veniam natus veritatis corrupti quod minima quo. Atque porro corrupti praesentium culpa tempore? Ipsam.
-            </p>
+               </p>
 
-            <button>WATCH NOW</button>
+            <a href="watch.html">
+                <button>WATCH NOW</button>
+              </a>
         </div>
 
         <div class="image">
@@ -43,10 +44,10 @@
 
         <div class="navbar">
             <ul>
-                <li>Home</li>
-                <li>Team</li>
-                <li>Performance</li>
-                <li>Rank</li>
+                <li>Home</a></li>
+                <li><a href="team.html"  style="display: block; text-decoration: none;">Team</a></li>
+                <li><a href="performance.html" style="display: block; text-decoration: none;">Performance</a></li>
+                <li><a href="rank.html"  style="display: block; text-decoration: none;">Rank</a></li>
             </ul>
         </div>
 
@@ -57,13 +58,17 @@
 
         <div class="list">
             <ol>
-                <li onclick="myFun('Indian-cricketer.jpg')">CSK</li>
-                <li onclick="myFun('Aus-team.webp')">DC</li>
-                <!-- <li onclick="myFun('imgaes/mi.png', 'dodgerblue', 'Mumbai Indians', 'imgaes/milogo.png')">MI</li>
-                <li onclick="myFun('imgaes/srh.png', 'orangered', 'Sun Raise Hydrabad', 'imgaes/srhlogo.png')">SRH</li>
-                <li onclick="myFun('imgaes/kp.png', 'red', 'King XI Punjab', 'imgaes/kplogo.png')">KXIP</li>
-                <li onclick="myFun('imgaes/rr1.png', '#ff3385', 'Rajastan Royals', 'imgaes/rrlogo.png')">RR</li>
-                <li onclick="myFun('imgaes/kkr.png', 'purple', 'Kolkata Knight Riders', 'imgaes/kkrlogo.png')">KKR</li> -->
+                <li onclick="myFun('Indian-cricketer.jpg', 'dodgerblue', 'INDIAN', 'Cricket_India_Crest.webp')">INDIAN</li>
+                <li onclick="myFun('Aus-team.webp', 'yellow', 'AUS ', 'aus-cricket-logo.webp')">AUS</li>
+                <li onclick="myFun('NZ-Team.webp', 'black', ' NZ', 'new-zealand-logo.png')">NZ</li>
+                <li onclick="myFun('England-Cricket-Team.webp', 'dodgerblue', ' INDIAN', 'England_cricket_team_logo.svg.png')">England</li>
+                <li onclick="myFun('west-indies_team.webp', 'yellow', 'AUS ', 'Cricket_West_Indies_Logo.png')">WestIndies</li>
+                <li onclick="myFun('Sri-Lanka-National-Cricket-Team.jpg', 'black', ' NZ', 'sri-lank-logo.png')">SriLanka</li>
+                <li onclick="myFun('bangladesh-team.avif', 'dodgerblue', ' INDIAN', 'balgadesh-logo.png')">Bangladesh</li>
+                <li onclick="myFun('Zimbabwe-team.jpg', 'yellow', 'AUS ', 'Zimbabwe-logo.png')">Zimbabwe</li>
+                <li onclick="myFun('South-Africa-National-Cricket-Team.jpg', 'black', ' NZ', 'Southafrica_cricket_logo.png')">SA</li>
+                <li onclick="myFun('Pakistan-Cricket-Team.jpg', 'dodgerblue', ' INDIAN', 'pakistan-logo.jpg')">Pakistan</li>
+
             </ol>
         </div>
 
